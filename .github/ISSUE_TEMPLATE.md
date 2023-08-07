@@ -1,3 +1,11 @@
+---
+name: Bug Report
+about: Report a bug to help us improve
+title: ':bug: Bug '
+labels: bug
+assignees: ''
+---
+
 ## Bug Report
 
 ### 🐛 Summary
