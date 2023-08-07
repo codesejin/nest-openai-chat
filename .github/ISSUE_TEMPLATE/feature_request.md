@@ -1,20 +1,16 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+## 기능 요청 (Feature Request)
 
----
+### 개요 (Summary)
+<!-- 추가하거나 개선해야 할 기능에 대한 간략한 설명을 적어주세요. -->
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### 필요성 (Motivation)
+<!-- 해당 기능이 필요한 이유를 설명해주세요. -->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+### 구체적인 설명 (Detailed Description)
+<!-- 기능에 대한 구체적인 설명이나 동작 방식에 대해 자세히 적어주세요. -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+### 대안 (Alternatives)
+<!-- 해당 기능을 구현하는 다른 방법이나 대안에 대해 알고 있다면 적어주세요. -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+### 추가 정보 (Additional Information)
+<!-- 기능 요청에 대해 추가적으로 설명하거나 기록해야 할 정보가 있다면 여기에 적어주세요. -->
