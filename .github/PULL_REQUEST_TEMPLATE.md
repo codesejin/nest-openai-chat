@@ -1,5 +1,5 @@
 ## PR Checklist 
-적용이 되는지 테스트
+
 Please check if your PR fulfills the following requirements:
 
 - [ ] The commit message follows our guidelines: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
