@@ -3,6 +3,8 @@ import { Configuration, OpenAIApi } from 'openai';
 import * as fs from 'fs';
 import * as path from 'path';
 
+require('dotenv').config();
+
 const configuration = new Configuration({
   organization: process.env.ORGANIZATION,
   apiKey: process.env.API_KEY // 본인 apiKey
@@ -53,15 +55,25 @@ export class AppService {
       fs.mkdirSync(saveDirectory);
     }
 
+    // 이미 존재하는 파일들의 목록 가져오기
+    const existingFiles = fs.readdirSync(saveDirectory);
+
     // 파일 이름 설정
     let defaultName = 'dummy';
     let fileIndex = 1;
-    let fileName = `${defaultName}_${fileIndex}.json`;
 
-    if (fs.existsSync(path.join(saveDirectory, fileName))) {
-      fileIndex++;
-      fileName = `${defaultName}_${fileIndex}.json`;
-    }
+    // 이미 존재하는 파일이 있을 경우 새로운 파일을 생성하기 위해 기존 파일 목록 중 가장 큰 인덱스 찾기
+    existingFiles.forEach((filename) => {
+      const match = filename.match(/dummy_(\d+)\.json/);
+      if (match) {
+        const index = parseInt(match[1]);
+        if (index >= fileIndex) {
+          fileIndex = index + 1;
+        }
+      }
+    });
+
+    let fileName = `${defaultName}_${fileIndex}.json`;
 
     // 파일 경로 설정
     const filePath = path.join(saveDirectory, fileName);
